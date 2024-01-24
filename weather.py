@@ -27,7 +27,6 @@ if __name__ == "__main__":
     r = requests.get('https://weather.talkpython.fm/api/weather/?city=Berlin&country=DE')
     if r.status_code == 200:
         data = r.json()
-        print(data)
         temperature = data["forecast"]["temp"]
         weather = data["weather"]["description"]
         logger.info(f'Weather in Berlin: {weather},temp: {temperature}')
