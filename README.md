@@ -35,9 +35,9 @@ This approach is not only cost-effective but also demonstrates a practical appli
 This application is also dockerized for easy deployment and scalability:
 
 1.  Build the Docker image using the provided Dockerfile.
-   -  docker build -t weather-app .
+      -  docker build -t weather-app .
 
 3.  Run the Docker container, passing the API_TOKEN as an environment variable.
-   -  docker run -e API_TOKEN=enter_your_token_here -v /path/on/host:/usr/src/app/logs weather-app
+      -  docker run -e API_TOKEN=enter_your_token_here -v /path/on/host:/usr/src/app/logs weather-app
 
 
