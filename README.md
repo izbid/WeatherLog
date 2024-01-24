@@ -31,6 +31,7 @@ This approach is not only cost-effective but also demonstrates a practical appli
 4.  Run python weather.py.
 
 **Dockerization**
+
 This application is also dockerized for easy deployment and scalability:
 
 1.  Build the Docker image using the provided Dockerfile.
