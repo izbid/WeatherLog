@@ -13,12 +13,26 @@ This application leverages the GitHub Actions feature, making the most out of th
 This approach is not only cost-effective but also demonstrates a practical application of GitHub Actions for automation projects.
 
 ## Basic Setup
-1.  GitHub Actions Configuration:
+1.  **GitHub Actions Configuration:**
 *  The cron job is configured in the .github/workflows/weather_cronjobs.yml file.
 *  Modify the schedule in the YAML file to set the desired frequency for the script execution.
-2.  API Token Configuration:
+2.  **API Token Configuration:**
 *  Ensure that the API_TOKEN environment variable is set in your GitHub repository settings for secure API access.
-3.  Logging Configuration:
+3.  **Logging Configuration:**
 *  The script writes output to weather_status.log.
 *  Log file management (e.g., rotation, backup) is handled within the script.
+
+### Running the Application Locally
+**To run the script locally:**
+
+1.Clone the repository.
+2.Install required dependencies from requirements.txt.
+3.Set up the API_TOKEN environment variable.
+4.Run python weather.py.
+
+**Dockerization**
+This application is also dockerized for easy deployment and scalability:
+
+1.Build the Docker image using the provided Dockerfile.
+2.Run the Docker container, passing the API_TOKEN as an environment variable.
 
