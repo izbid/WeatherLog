@@ -25,14 +25,14 @@ This approach is not only cost-effective but also demonstrates a practical appli
 ### Running the Application Locally
 **To run the script locally:**
 
-1.Clone the repository.
-2.Install required dependencies from requirements.txt.
-3.Set up the API_TOKEN environment variable.
-4.Run python weather.py.
+1.  Clone the repository.
+2.  Install required dependencies from requirements.txt.
+3.  Set up the API_TOKEN environment variable.
+4.  Run python weather.py.
 
 **Dockerization**
 This application is also dockerized for easy deployment and scalability:
 
-1.Build the Docker image using the provided Dockerfile.
-2.Run the Docker container, passing the API_TOKEN as an environment variable.
+1.  Build the Docker image using the provided Dockerfile.
+2.  Run the Docker container, passing the API_TOKEN as an environment variable.
 
