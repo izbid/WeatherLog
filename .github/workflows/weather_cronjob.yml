@@ -26,18 +26,16 @@ jobs:
           SOME_SECRET: ${{ secrets.SOME_SECRET }}
         run: python weather.py
 
-      - name: Fetch latest changes from master
+      - name: Pull latest changes from master with rebase
         run: |
-          git fetch origin master
-          git checkout master
-          git merge origin/master
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          git pull --rebase origin master
 
       - name: commit files
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
           git add -A
-          git diff-index --quiet HEAD || (git commit -a -m "updated logs" --allow-empty)
+          git diff-index --quiet HEAD || (git commit -m "updated logs" --allow-empty)
 
       - name: push changes
         uses: ad-m/github-push-action@v0.6.0
