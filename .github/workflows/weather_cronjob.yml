@@ -34,15 +34,9 @@ jobs:
           git add -A
           git diff-index --quiet HEAD || (git commit -a -m "updated logs" --allow-empty)
 
-      - name: Pull latest changes from master
-        run: |
-          git config --global user.email "Bede.chk@gmail.com"
-          git config --global user.name "izbid"
-          git pull origin master
-
           
       - name: push changes
         uses: ad-m/github-push-action@v0.6.0
         with:
-          github_token: ${{ secrets.ACCESS_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: master
